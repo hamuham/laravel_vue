@@ -8,5 +8,6 @@ InertiaTest<br>
 <a href="/">aタグ</a><br>
 <Link href="/">Linkタグ</Link><br>
 <Link :href="route('inertia.index')">ineriaroutetest</Link>
+<Link :href="route('inertia.show', { id: 1})">ルートパラメータテスト</Link>
 
 </template>
