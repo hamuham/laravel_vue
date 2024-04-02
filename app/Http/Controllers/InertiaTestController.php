@@ -19,6 +19,13 @@ class InertiaTestController extends Controller
             'id' => $id
         ]);
     }
+
+    public function create()
+    {
+        return Inertia::render('Inertia/Create');
+
+    }
+
     public function store(Request $request)
     {
         $inertiaTest = new InertiaTest;
