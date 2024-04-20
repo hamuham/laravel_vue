@@ -1,7 +1,20 @@
-<script setup></script>
+<script setup>
+import { reactive } from 'vue'
+import { Inertia } from '@inertiajs/inertia'
+
+defineProps({
+    blogs: Array
+})
+</script>
 <template>
     <div v-if="$page.props.flash.message">
     {{ $page.props.flash.message }}
     </div>
-てsと
+    <ul>
+        <li v-for="blog in blogs" :key="blog.id">
+            件名: <Link :href="route('inertia.show', { id: blog.id })">{{ blog.title }}<Link/>,
+            本文: {{ blog.content }}
+        </li>
+    </ul>
+テスト
 </template>
