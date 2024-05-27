@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         $items = \App\Models\Item::all();
 
-        \App\Models\Customer::factory(1000)->create();
+        \App\Models\Customer::factory(5000)->create();
         Purchase::factory(100)->create()
             ->each(function(Purchase $purchase) use ($items){
             //中間テーブルにも登録

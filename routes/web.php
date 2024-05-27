@@ -15,7 +15,7 @@ Route::resource('items', ItemController::class)
 Route::resource('customers', CustomerController::class)
 ->middleware(['auth', 'verified']);
 
-Route:resource('purchases', PurchaseControler:class)
+Route::resource('purchases', PurchaseControler::class)
 ->middleware(['auth', 'verified']);
 
 Route::get('/inertia-test', function () {
