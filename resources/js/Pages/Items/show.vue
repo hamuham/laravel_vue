@@ -64,12 +64,11 @@ const deleteItem = id => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="flex pl-4 my-4 lg:w-2/3 w-full mx-auto">
-                                            <Link as="button" :href="route('items.edit', { item: item.id })" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">商品編集</Link>
+                                        <div class="p-2 w-full">
+                                            <Link as="button" :href="route('items.edit', { item: item.id })" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">編集する</Link>
                                         </div>
-
-                                        <div class="flex mt-20 pl-4 my-4 lg:w-2/3 w-full mx-auto">
-                                            <button @click="deleteItem(item.id)" class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">削除</button>
+                                        <div class="mt-20 p-2 w-full">
+                                            <button @click="deleteItem(item.id)"  class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">削除する</button>
                                         </div>
                                     </div>
                                 </div>

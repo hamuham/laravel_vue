@@ -13,7 +13,6 @@ class AnalysisController extends Controller
 {
     public function index()
     {
-
         return Inertia::render('analysis');
     }
 }

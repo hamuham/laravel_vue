@@ -1,5 +1,5 @@
 <script setup>
-import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
+import BreezeAuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import { onMounted, reactive, ref, computed } from 'vue'
 import { Inertia } from '@inertiajs/inertia'
@@ -30,7 +30,7 @@ onMounted(() => {
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <BreezeValidationErrors class="mb-4" />
+                        <!-- <BreezeValidationErrors class="mb-4" /> -->
                         <section class="text-gray-600 body-font relative">
                             <form @submit.prevent="storePurchase">
                                 <div class="container px-5 py-8 mx-auto">
@@ -102,6 +102,8 @@ onMounted(() => {
                                             </div>
                                             <div v-if="props.order[0].status == true" class="p-2 w-full">
                                                 <Link as="button" :href="route('purchases.edit', { purchase: props.order[0].id })" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">編集する</Link>
+qqqq                                            <Link as="button" :href="route('items.edit', { item: item.id })" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">編集する</Link>
+
                                             </div>
                                         </div>
                                     </div>

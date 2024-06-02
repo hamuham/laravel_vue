@@ -7,7 +7,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\InertiaTestController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controlers\PurchaseControler;
+use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\AnalysisController;
 
 Route::get('analysis', [AnalysisController::class, 'index'])->name('analysis');
@@ -18,7 +18,7 @@ Route::resource('items', ItemController::class)
 Route::resource('customers', CustomerController::class)
 ->middleware(['auth', 'verified']);
 
-Route::resource('purchases', PurchaseControler::class)
+Route::resource('purchases', PurchaseController::class)
 ->middleware(['auth', 'verified']);
 
 Route::get('/inertia-test', function () {

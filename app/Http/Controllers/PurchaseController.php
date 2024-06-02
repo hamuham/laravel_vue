@@ -8,6 +8,7 @@ use App\Models\Purchase;
 use Inertia\Inertia;
 use App\Models\Customer;
 use App\Models\Item;
+use App\Models\Order;
 use Illuminate\Support\Facades\DB;
 
 class PurchaseController extends Controller
@@ -38,7 +39,7 @@ class PurchaseController extends Controller
     {
         $customers = Customer::select('id', 'name', 'kana')->get();
         $items = Item::select('id', 'name', 'price')
-            ->where('is_seling', true)
+            ->where('is_selling', true)
             ->get();
         return Inertia::render('Purchases/create', [
             'customers' => $customers,
